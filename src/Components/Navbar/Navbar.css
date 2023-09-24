@@ -1,0 +1,13 @@
+nav{
+    margin-right: 20px;
+    width: 50vw;
+}
+.navbar-items-wraper{
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+.navbar-Item{
+font-size: 1em;
+}
+

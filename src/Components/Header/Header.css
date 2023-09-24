@@ -1,0 +1,9 @@
+.Headercontainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.LogoImage{
+    margin-top:20px;
+    margin-left:20px;
+}

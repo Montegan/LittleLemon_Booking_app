@@ -1,0 +1,9 @@
+.HeroSection{
+display: grid;
+grid-template-columns: auto auto;
+grid-template-rows: auto auto auto;
+background-color: aquamarine;
+}
+.HeroImg{
+grid-row: span 3;
+}
