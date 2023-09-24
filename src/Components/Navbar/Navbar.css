@@ -1,6 +1,6 @@
 nav{
     margin-right: 20px;
-    width: 50vw;
+    width: 55vw;
 }
 .navbar-items-wraper{
     display: flex;
@@ -9,5 +9,19 @@ nav{
 }
 .navbar-Item{
 font-size: 1em;
+margin-right: 5px;
 }
+
+@media  screen and (max-width:1000px) {
+.navbar-Item{
+    font-size: 0.9em;
+}
+}
+
+@media  screen and (max-width:1000px) {
+    .Burger-items-wraper{
+    display: flex;
+    flex-direction: column;
+    }
+    }
 

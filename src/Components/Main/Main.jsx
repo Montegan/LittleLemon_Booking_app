@@ -3,12 +3,18 @@ import './Main.css'
 function Main() {
   return (
     <main>
-        <section className='HeroSection'>
-            <h1> Little Lemon</h1>
-            <h3>UAE</h3>
-            <p>We are a family owned Mediterranean restaurant,
+        <section aria-labelledby='HeroTitle' className='HeroSection'>
+            <div className='heroTitleContainer'>
+            <h1 id="HeroTitle"> Little Lemon</h1>
+            <h2 className='heroSubTitle'>UAE</h2>
+            <p className='heroDescription'>We are a family owned Mediterranean restaurant,
             Focused on traditional recipes served with a modern twist</p>
-            <img className='HeroImg' src={require('../../Assets/Logo.png')} height='300px' width='300px' alt='banner of little lemon'/>
+            <button type='button' className='ReserveButton'>Reserve Table</button>
+            </div>
+            <div className='HeroImgContainer'>
+            <img className='HeroImg' src={require('../../Assets/restaurant chef B.jpg')}  alt='banner of little lemon'/>
+            </div>
+           
         </section>
     </main>
   )

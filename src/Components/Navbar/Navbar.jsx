@@ -4,12 +4,12 @@ function Navbar() {
   return (
     <nav>
     <ul className='navbar-items-wraper'>
-        <li className='navbar-Item'>Home</li>
-        <li className='navbar-Item'>About</li>
-        <li className='navbar-Item'>Menu</li>
-        <li className='navbar-Item'>Reservations</li>
-        <li className='navbar-Item'>Order online </li>
-        <li className='navbar-Item'>Signup/Login</li>
+        <li className='navbar-Item'><a> Home</a></li>
+        <li className='navbar-Item'><a> About</a></li>
+        <li className='navbar-Item'><a> Menu</a></li>
+        <li className='navbar-Item'><a> Reservations</a></li>
+        <li className='navbar-Item'><a> Order online</a> </li>
+        <li className='navbar-Item'><a>Signup/Login</a></li>
     </ul>
     </nav>
   )
