@@ -1,6 +1,7 @@
-import React from 'react'
-import './Main.css'
-import Testimonials from './Testimonials/Testimonials'
+import React from 'react';
+import './Main.css';
+import Testimonials from './Testimonials/Testimonials';
+import Aboutus from './Aboutus/Aboutus';
 function Main() {
   return (
     <main>
@@ -58,6 +59,7 @@ function Main() {
         </section>
 
         <Testimonials/>
+        <Aboutus/>
     </main>
   )
 }

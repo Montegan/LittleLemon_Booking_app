@@ -1,0 +1,93 @@
+.aboutusSection{
+ display: grid;
+ grid-template-columns: auto auto;
+ grid-template-rows: auto 70vh;
+ background-color: #FFFFFF;
+}
+#aboutusID{
+    grid-column: span 2;
+    text-align: center;
+    font-size: 3em;
+}
+.aboutusText{
+    justify-self: center;
+    align-self: center;
+    padding: 20px;
+}
+
+.aboutusLogo{
+    font-size: 4em;
+    font-family: 'Markazi Text','Times New Roman', Times, serif;
+    font-weight: 600;
+    padding: 0px;
+    margin: 0px 0px 0px 10px;
+}
+
+.aboutusLocation{
+    font-size: 2.5em;
+    font-family: 'Markazi Text','Times New Roman', Times, serif;
+    font-weight: 600;
+    padding: 0px;
+    margin: 0px 0px 20px 10px;
+}
+.aboutusDescription{
+    font-family: 'karla','Times New Roman', Times;
+    font-size: 1.3em;
+    font-weight: 300;
+    line-height: 23px;
+    margin: 3px 10px 0px 15px;
+    max-width: 40vw;
+}
+
+.aboutusimage{
+  margin-top: 80px;
+  height: 75%;
+  border:none;
+  border-radius: 10px;
+}
+
+@media  screen and (max-width:1000px) {
+
+    .aboutusLogo{
+        font-size: 3.7em;
+    }
+    .aboutusLocation{
+        font-size: 2.3em;
+    }
+    .aboutusDescription{
+        font-size: 1.1em;
+    }
+    .aboutusimage{
+        margin-top: 90px;
+        height: 63%;
+      }
+}
+@media  screen and (max-width:800px) {
+
+    .aboutusSection{
+        grid-template-columns: auto ;
+        grid-template-rows: auto auto auto;
+        background-color: #FFFFFF;
+       }
+    .aboutusText{
+       grid-column: span 2;
+       width: 80vw ;
+       }
+       .aboutusDescription{
+        font-size: 1.3em;
+        max-width: 80vw;
+    }
+    .aboutusImageContanier{
+        margin-top: 30px;
+        grid-column: span 2;
+        height:50vh;
+        width: 450px;
+        justify-self: center;
+       }
+       .aboutusimage{
+        margin-left: 10px;
+        margin-top: 0px;
+        height: 96%;
+        width: 430px;
+      }
+}
