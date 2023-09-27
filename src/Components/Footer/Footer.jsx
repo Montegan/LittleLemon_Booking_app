@@ -3,8 +3,8 @@ import './Footer.css'
 function Footer() {
   return (
     <section aria-labelledby='ContactusHeader'  className='footerContainer'>
-    <div>
-    <img className='LogoImage' src={require('../../Assets/Logo.png')} height='50px' width='150px' alt=" Little Lemon Logo "  />
+    <div className='LogoImage'>
+    <img  src={require('../../Assets/Logo.png')} height='50px' width='150px' alt=" Little Lemon Logo "  />
     </div>
     <div>
     <ul className='footerNavUl'>
@@ -16,12 +16,12 @@ function Footer() {
         <li className='footerNavItem'><a>Signup/Login</a></li>
     </ul>
     </div>
-    <div>
-    <h1 id='ContactusHeader'>
+    <div className='listHeaderWraper'>
+    <h1 id='ContactusHeader' className='fotterHeaders'>
     Contact Us
     </h1>
-    <ul className='footerNavUl'>
-        <li className='footerNavItem'><a> Home</a></li>
+    <ul className='footerContactusUl'>
+        <li className='footerNavItem'><a > Home</a></li>
         <li className='footerNavItem'><a> About</a></li>
         <li className='footerNavItem'><a> Menu</a></li>
         <li className='footerNavItem'><a> Reservations</a></li>
@@ -29,11 +29,11 @@ function Footer() {
         <li className='footerNavItem'><a>Signup/Login</a></li>
     </ul>
     </div>
-    <div>
-    <h1>
+    <div className='listHeaderWraper'>
+    <h1 className='fotterHeaders'>
     Social media links
     </h1>
-    <ul className='footerNavUl'>
+    <ul className='footerSocialmediaUl'>
         <li className='footerNavItem'><a> Home</a></li>
         <li className='footerNavItem'><a> About</a></li>
         <li className='footerNavItem'><a> Menu</a></li>

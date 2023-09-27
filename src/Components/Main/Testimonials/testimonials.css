@@ -117,7 +117,7 @@ display: none;
             padding-bottom: 0px;
             }
         #testimonialsID{
-        font-size: 3.8em;
+        font-size: 3.6em;
         }
         .TestimonialsItemContanier{
         grid-column:span 2;
@@ -142,4 +142,26 @@ display: none;
             height: 40%;
             overflow-y: hidden;
         }
+}
+@media screen and (max-width:600px) {
+ 
+    .testimonialsSection{
+        grid-template-rows: auto 55vh 55vh 55vh;}
+    .customerImg{
+        height: 40%;
+        width:100px;
+    }
+    .cutomerName{
+        font-size: 1em;
+        }
+    .customerRating{
+            font-size: 0.5em;
+            }
+   .customerDescription{
+            font-size: 0.63em;
+            height: 100%;
+            text-align: left;
+            overflow-y: hidden;
+            }
+
 }
