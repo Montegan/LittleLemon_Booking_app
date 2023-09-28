@@ -2,7 +2,7 @@ import React from 'react'
 import './aboutus.css';
 function Aboutus() {
   return (
-    <section aria-labelledby='aboutusID' className='aboutusSection'>
+    <section aria-labelledby='aboutusID' id='aboutusroute' className='aboutusSection'>
     <h1 id="aboutusID">About us</h1>
     <div className='aboutusText'>
     <h1 className='aboutusLogo' >Little lemon</h1>

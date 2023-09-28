@@ -2,7 +2,7 @@ import React from 'react'
 import './testimonials.css'
 function Testimonials() {
   return (
-    <section aria-labelledby='testimonialsID' className='testimonialsSection'>
+    <section aria-labelledby='testimonialsID' id='testimonialsid' className='testimonialsSection'>
 
            <div className='TestimonialsTitleContainer'>
             <h1 id="testimonialsID"> Testimonials</h1>
