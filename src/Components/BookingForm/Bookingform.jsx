@@ -17,8 +17,6 @@ function Bookingform({
   const handleSubmition = (e) => {
     e.preventDefault();
     console.log(availableTime.Times)
-    setBookingDetails({ ...BookingDetails,freeTime: BookingDetails.freeTime.filter((items)=> items!== e.target.value) });
-    console.log(BookingDetails.freeTime)
     setformData([...formdata, BookingDetails]);
     setBookingDetails({
       ...BookingDetails,
@@ -26,7 +24,16 @@ function Bookingform({
       Time: "",
       GuestNumber: "",
       Occasion: "",
-      freeTime: [...availableTime.Times]
+      freeTime:[
+    "17:00",
+    "18:00",
+    "19:00",
+    "20:00",
+    "21:00",
+    "22:00",
+    "2323",
+    '3232',
+  ]
     });
   };
 
@@ -53,7 +60,7 @@ function Bookingform({
           placeholder="Select time"
           value={BookingDetails.Time}
           onChange={(e) => {
-            setBookingDetails({ ...BookingDetails, Time: e.target.value, freeTime: BookingDetails.freeTime.filter((items)=> items!== e.target.value) });
+            setBookingDetails({ ...BookingDetails, Time: e.target.value, freeTime: availableTime.Times.filter((items)=> items!== e.target.value) });
           }}
           className="Timefield"
         >

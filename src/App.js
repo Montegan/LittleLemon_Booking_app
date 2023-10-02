@@ -12,8 +12,7 @@ function App() {
 
   const Change_time = (TimeList, action) => {
     const selectedDate = formdata.filter(
-        (items) => action.payload === items.Date
-          );
+        (items) => action.payload === items.Date);
           console.log(selectedDate)
           if(selectedDate.length===0){
             return {TimeList,Times:[
@@ -26,24 +25,32 @@ function App() {
             ]}
             }
           else if(selectedDate.length!==0){
-
-             let Temp= selectedDate[0].freeTime;
+            if (selectedDate[0].Date === action.payload){
+             //let Temp= selectedDate.map((items)=>{return items.freeTime});
+             let bep=selectedDate.map((itemz)=>{ return itemz.Time});
+             let zed=selectedDate.map((itemz)=>{ return itemz.freeTime});
+             let cap= zed[zed.length-1].filter((eri)=> eri !== bep[bep.length-1])
+             //let cap= bep.map((times)=>{ return zed[0].filter((eri)=> eri !== times)})
+             console.log(bep[bep.length-1])
+             console.log(zed)
+             console.log(cap);
              //["17:00",
             // "18:00",
             // "19:00",
             // "20:00",
             // "21:00",
             // "22:00"]
-            if (selectedDate[0].Date === action.payload){
-            console.log(selectedDate[0].Date)
-            console.log(action.payload)
-            const availableTime= selectedDate.map((items)=>{
-              console.log(items.Time)
-              console.log(Temp)
-             return Temp.filter((time) => time !== items.Time)
-            })
-            console.log(availableTime[0])
-            return {TimeList,Times:availableTime[0]} }
+            // console.log(bep)
+            // console.log(Temp);
+            //console.log(selectedDate[0].Date)
+            //console.log(action.payload)
+            // const availableTime= selectedDate.map((items)=>{
+            //   // console.log(items.Time)
+            //   // console.log(Temp)
+            //  return (cap.pop()).filter((time) => time !== items.Time)
+            // })
+             //console.log("available= " + availableTime[1])
+            return {TimeList,Times:cap} }
           }
           }
   const [TimeList, dispatch] = useReducer(Change_time, {Times:[
