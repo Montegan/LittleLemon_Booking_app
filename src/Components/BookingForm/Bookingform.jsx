@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import "./bookingform.css";
+
+
 function Bookingform({
   formdata,
   setformData,
   availableTime,
   setavailabeTime,
+  submitted,
+  setSubmitted
 }) {
   const [BookingDetails, setBookingDetails] = useState({
     Date: "",
@@ -18,22 +22,14 @@ function Bookingform({
     e.preventDefault();
     console.log(availableTime.Times)
     setformData([...formdata, BookingDetails]);
+    setSubmitted(true);
     setBookingDetails({
       ...BookingDetails,
       Date: "",
       Time: "",
       GuestNumber: "",
       Occasion: "",
-      freeTime:[
-    "17:00",
-    "18:00",
-    "19:00",
-    "20:00",
-    "21:00",
-    "22:00",
-    "2323",
-    '3232',
-  ]
+      freeTime:[],
     });
   };
 
@@ -45,6 +41,7 @@ function Bookingform({
           type="date"
           id="formDate"
           value={BookingDetails.Date}
+          required
           onChange={(e) => {
             setBookingDetails({ ...BookingDetails, Date: e.target.value });
             setavailabeTime({ payload: e.target.value });
@@ -59,22 +56,23 @@ function Bookingform({
           id="formTime"
           placeholder="Select time"
           value={BookingDetails.Time}
+          required
           onChange={(e) => {
             setBookingDetails({ ...BookingDetails, Time: e.target.value, freeTime: availableTime.Times.filter((items)=> items!== e.target.value) });
           }}
           className="Timefield"
         >
           {availableTime.Times.length === 0 ? (
-            <option value="" disabled selected>
+            <option value="" defaultValue disabled >
               No time slots available
             </option>
           ) : (
             <>
-              <option value="Please select an option" selected hidden>
+              <option defaultValue hidden>
                 Please select an option
               </option>
               {availableTime.Times.map((time) => (
-                <option key={time} value={time} > {time} </option>
+                <option key={time}  > {time} </option>
               ))}
             </>
           )}
@@ -84,6 +82,7 @@ function Bookingform({
           type="number"
           id="formGuest"
           className="Guestfield"
+          required
           placeholder="1"
           min="1"
           max="12"
@@ -99,6 +98,7 @@ function Bookingform({
         <select
           id="formOccasion"
           value={BookingDetails.Occasion}
+          required
           onChange={(e) => {
             setBookingDetails({
               ...BookingDetails,

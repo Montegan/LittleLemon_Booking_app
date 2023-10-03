@@ -4,12 +4,13 @@ import ContactUs from "./Pages/ContactUs";
 import AboutUs from "./Pages/AboutUs";
 import Reservetable from "./Pages/Reservetable";
 import Fullmenu from "./Pages/Fullmenu";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes,useNavigate } from "react-router-dom";
 import Register from "./Pages/Register";
-import { useState, useReducer } from "react";
+import { useState, useReducer, useEffect } from "react";
+import ConfirmedBooking from "./Components/ConfirmedBooking/ConfirmedBooking";
 function App() {
   const [formdata, setformData] = useState([]);
-
+  const [submitted,setSubmitted]=useState(false);
   const Change_time = (TimeList, action) => {
     const selectedDate = formdata.filter(
         (items) => action.payload === items.Date);
@@ -60,8 +61,20 @@ function App() {
     "20:00",
     "21:00",
     "22:00",
-  ]}
-  );
+  ]}  );
+  const navigate = useNavigate();
+
+  useEffect(
+    ()=>{
+      
+      if(submitted){
+        console.log("hello submitted")
+        navigate('/Confirmed');
+        setSubmitted(false);
+         }
+    }
+    ,[submitted]);
+
   return (
     <>
       <Routes>
@@ -76,9 +89,12 @@ function App() {
               setavailabeTime={dispatch}
               setformData={setformData}
               formdata={formdata}
+              submitted={submitted}
+              setSubmitted={setSubmitted}
             />
           }
         />
+        <Route path="/Confirmed" element={<ConfirmedBooking/>}/>
         <Route path="/Fullmenu" element={<Fullmenu />} />
         <Route path="/Register" element={<Register />} />
       </Routes>
