@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./bookingform.css";
-
+import axios from "axios";
 
 function Bookingform({
   formdata,
@@ -8,28 +8,38 @@ function Bookingform({
   availableTime,
   setavailabeTime,
   submitted,
-  setSubmitted
+  setSubmitted,
+  clicked,
+  setClicked,
 }) {
   const [BookingDetails, setBookingDetails] = useState({
     Date: "",
     Time: "",
     GuestNumber: "",
     Occasion: "",
-    freeTime:[...availableTime.Times],
+    freeTime: [...availableTime.Times],
   });
 
   const handleSubmition = (e) => {
     e.preventDefault();
-    console.log(availableTime.Times)
-    setformData([...formdata, BookingDetails]);
+    // console.log(availableTime.Times)
+    // setformData([...formdata, BookingDetails]);
+    const uploadable = BookingDetails;
+    axios
+      .post("http://localhost:3000/userData", uploadable)
+      .then((res) => console.log(res.data))
+      .catch((err) => console.log(err));
+
+    console.log(formdata);
     setSubmitted(true);
+    setClicked(true);
     setBookingDetails({
       ...BookingDetails,
       Date: "",
       Time: "",
       GuestNumber: "",
       Occasion: "",
-      freeTime:[],
+      freeTime: [],
     });
   };
 
@@ -50,29 +60,33 @@ function Bookingform({
           className="Datefield"
         />
 
-
         <label htmlFor="formTime">Time</label>
         <select
           id="formTime"
-          placeholder="Select time"
           value={BookingDetails.Time}
           required
           onChange={(e) => {
-            setBookingDetails({ ...BookingDetails, Time: e.target.value, freeTime: availableTime.Times.filter((items)=> items!== e.target.value) });
+            setBookingDetails({
+              ...BookingDetails,
+              Time: e.target.value,
+              freeTime: availableTime.Times.filter(
+                (items) => items !== e.target.value
+              ),
+            });
           }}
           className="Timefield"
         >
           {availableTime.Times.length === 0 ? (
-            <option value="" defaultValue disabled >
-              No time slots available
+            <option value="" defaultValue disabled>
+              No time slots available for this date
             </option>
           ) : (
             <>
-              <option defaultValue hidden>
-                Please select an option
+              <option value="" defaultValue disabled>
+                Please select time
               </option>
               {availableTime.Times.map((time) => (
-                <option key={time}  > {time} </option>
+                <option key={time}> {time} </option>
               ))}
             </>
           )}
