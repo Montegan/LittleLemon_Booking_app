@@ -173,131 +173,17 @@
     },
     {
       "Date": "2023-10-02",
-      "Time": "",
-      "GuestNumber": "1",
-      "Occasion": "",
+      "Time": "18:00",
+      "GuestNumber": "2",
+      "Occasion": "Date Night",
       "freeTime": [
         "17:00",
-        "18:00",
         "19:00",
         "20:00",
         "21:00",
         "22:00"
       ],
       "id": 15
-    },
-    {
-      "Date": "2023-10-02",
-      "Time": "",
-      "GuestNumber": "2",
-      "Occasion": "Anniversary",
-      "freeTime": [
-        "17:00",
-        "18:00",
-        "19:00",
-        "20:00",
-        "21:00",
-        "22:00"
-      ],
-      "id": 16
-    },
-    {
-      "Date": "2023-10-02",
-      "Time": "",
-      "GuestNumber": "5",
-      "Occasion": "Anniversary",
-      "freeTime": [
-        "17:00",
-        "18:00",
-        "19:00",
-        "20:00",
-        "21:00",
-        "22:00"
-      ],
-      "id": 17
-    },
-    {
-      "Date": "2023-10-02",
-      "Time": "",
-      "GuestNumber": "2",
-      "Occasion": "Anniversary",
-      "freeTime": [
-        "17:00",
-        "18:00",
-        "19:00",
-        "20:00",
-        "21:00",
-        "22:00"
-      ],
-      "id": 18
-    },
-    {
-      "Date": "2023-10-02",
-      "Time": "17:00",
-      "GuestNumber": "1",
-      "Occasion": "Anniversary",
-      "freeTime": [
-        "18:00",
-        "19:00",
-        "20:00",
-        "21:00",
-        "22:00"
-      ],
-      "id": 19
-    },
-    {
-      "Date": "2023-10-02",
-      "Time": "20:00",
-      "GuestNumber": "1",
-      "Occasion": "Anniversary",
-      "freeTime": [
-        "18:00",
-        "19:00",
-        "21:00",
-        "22:00"
-      ],
-      "id": 20
-    },
-    {
-      "Date": "2023-10-02",
-      "Time": "18:00",
-      "GuestNumber": "4",
-      "Occasion": "Birthday",
-      "freeTime": [
-        "19:00",
-        "21:00",
-        "22:00"
-      ],
-      "id": 21
-    },
-    {
-      "Date": "2023-10-03",
-      "Time": "21:00",
-      "GuestNumber": "2",
-      "Occasion": "Anniversary",
-      "freeTime": [
-        "19:00",
-        "22:00"
-      ],
-      "id": 22
-    },
-    {
-      "Date": "2023-10-03",
-      "Time": "22:00",
-      "GuestNumber": "3",
-      "Occasion": "Anniversary",
-      "freeTime": [
-        "19:00"
-      ],
-      "id": 23
-    },
-    {
-      "Date": "2023-10-03",
-      "Time": "19:00",
-      "GuestNumber": "1",
-      "Occasion": "Birthday",
-      "freeTime": [],
-      "id": 24
     }
   ]
 }

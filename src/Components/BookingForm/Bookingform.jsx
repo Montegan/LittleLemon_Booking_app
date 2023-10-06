@@ -38,7 +38,7 @@ function Bookingform({
       Date: "",
       Time: "",
       GuestNumber: "",
-      Occasion: "",
+      Occasion: "Date Night",
       freeTime: [],
     });
   };
@@ -121,7 +121,8 @@ function Bookingform({
           }}
           className="Occasionfield"
         >
-          <option value="Date Night">Date Night</option>
+         <option  value="" defaultValue disabled >Select Occasion</option>
+          <option  value="Date Night" >Date Night</option>
           <option value="Anniversary">Anniversary</option>
           <option value="Birthday">Birthday</option>
           <option value="Graduation">Graduation</option>
