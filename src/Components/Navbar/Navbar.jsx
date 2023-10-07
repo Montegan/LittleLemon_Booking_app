@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 function Navbar() {
   return (
     <>
-    <nav>
     <ul className='navbar-items-wraper'>
         <li className='navbar-Item'><Link to='/'>Home</Link></li>
         <li className='navbar-Item'><Link to='/Fullmenu' >Menu</Link></li>
@@ -13,7 +12,6 @@ function Navbar() {
         <li className='navbar-Item'><Link to='/AboutUs'>Aboutus</Link>  </li>
         <li className='navbar-Item'><Link to='/Register'>Login/sinup</Link>  </li>
     </ul>
-    </nav>
     </>
   )
 }
