@@ -1,5 +1,5 @@
 .footerContainer{
-margin-top: 40px;
+
 display: grid;
 grid-template-columns: 22vw 22vw 22vw 22vw;
 grid-template-rows: auto;

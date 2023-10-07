@@ -2,6 +2,7 @@ import React from "react";
 import Header from "../Components/Header/Header";
 import Footer from "../Components/Footer/Footer";
 import Bookingform from "../Components/BookingForm/Bookingform";
+import './Pages.css';
 function Reservetable({
   formdata,
   setformData,
@@ -13,7 +14,7 @@ function Reservetable({
   setClicked,
 }) {
   return (
-    <>
+    <div className="reservationClass">
       <Header />
       <Bookingform
         setformData={setformData}
@@ -26,7 +27,7 @@ function Reservetable({
         setClicked={setClicked}
       />
       <Footer />
-    </>
+    </div>
   );
 }
 
