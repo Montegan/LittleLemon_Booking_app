@@ -4,6 +4,7 @@ import ContactUs from "./Pages/ContactUs";
 import AboutUs from "./Pages/AboutUs";
 import Reservetable from "./Pages/Reservetable";
 import Fullmenu from "./Pages/Fullmenu";
+import Login from "./Pages/Login";
 import { Route, Routes, useNavigate } from "react-router-dom";
 import Register from "./Pages/Register";
 import { useState, useReducer, useEffect } from "react";
@@ -96,6 +97,7 @@ function App() {
         <Route path="/Confirmed" element={<ConfirmedBooking />} />
         <Route path="/Fullmenu" element={<Fullmenu />} />
         <Route path="/Register" element={<Register />} />
+        <Route path="/loginpage" element={<Login />} />
       </Routes>
     </>
   );

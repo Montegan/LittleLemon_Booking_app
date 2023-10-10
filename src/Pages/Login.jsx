@@ -3,15 +3,11 @@ import { useFormik } from "formik";
 import { Inputshcema } from "../Components/schema/Inputshcema";
 import Header from "../Components/Header/Header";
 import "./registration.css";
-import { useNavigate } from "react-router-dom";
-function Register() {
-
-  const navigate=useNavigate();
+function Login() {
   const onSubmit = async (values,actions) => {
     await new Promise((resolve) => setTimeout(resolve, 3000));
     console.log(values);
     actions.resetForm();
-    navigate('/loginpage');
   };
   const {
     values,
@@ -37,7 +33,7 @@ function Register() {
     <>
     <Header/>
     <div className="RegisterContainer">
-      <h1 className="registerheader">Register</h1>
+      <h1 className="registerheader">Log in</h1>
       <form className="formWraper" onSubmit={handleSubmit} autoComplete="off">
         <div className="inputContainer">
           <label htmlFor="name">Name :</label>
@@ -85,38 +81,6 @@ function Register() {
             ""
           )}
         </div>
-
-        <div className="inputContainer">
-          <label htmlFor="confirmPassword">Confirm password :</label>
-          <input
-            id="confirmPassword"
-            type="password"
-            value={values.confirmPassword}
-            onBlur={handleBlur}
-            onChange={handleChange}
-          />
-          {errors.confirmPassword && touched.confirmPassword ? (
-            <span className="inupt-failed">{errors.confirmPassword}</span>
-          ) : (
-            ""
-          )}
-        </div>
-        <div className="inputContainer">
-          <label htmlFor="telephone">Telephone :</label>
-          <input
-            id="telephone"
-            value={values.telephone}
-            onBlur={handleBlur}
-            onChange={handleChange}
-            type="phone"
-          />
-          {errors.telephone && touched.telephone ? (
-            <span className="inupt-failed">{errors.telephone}</span>
-          ) : (
-            ""
-          )}
-        </div>
-
         <button className="registerButton" disabled={isSubmitting} type="submit">
         Register
         </button>
@@ -126,4 +90,4 @@ function Register() {
   );
 }
 
-export default Register;
+export default Login;
