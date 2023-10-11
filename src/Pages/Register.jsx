@@ -41,7 +41,7 @@ function Register() {
     <>
       <Header />
       <div className="RegisterContainer">
-        <h1 className="registerheader">Register</h1>
+        <h1 className="registerheader">Registers</h1>
         <form className="formWraper" onSubmit={handleSubmit} autoComplete="off">
           <div className="inputContainer">
             <label htmlFor="name">Name :</label>
